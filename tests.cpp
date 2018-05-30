@@ -1,5 +1,22 @@
+#define CATCH_CONFIG_RUNNER
 #include "catch.hpp"
-#include "../Polynomial.h"
+#include "Polynomial.hpp"
+
+using namespace polynomial;
+
+/**
+ * Main function for catch.
+ * This is present to resolve some problems when running the Catch test suite in CLion.
+ * @param argc Number of arguments passed from command line
+ * @param argv Arguments passed from command line
+ * @return Status code.
+ */
+int main(int argc, char* argv[]) {
+    // Setup
+    auto result = Catch::Session().run(argc, argv);
+  // Tear down
+    return 0; //result;
+}
 
 using namespace polynomial;
 
